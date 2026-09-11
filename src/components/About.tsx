@@ -43,7 +43,7 @@ export default function About() {
           <p className="text-xs font-medium tracking-[0.28em] text-[color:var(--color-gray-400)]">
             OUR PHILOSOPHY
           </p>
-          <h2 className="mt-6 text-2xl font-semibold leading-snug text-[color:var(--color-navy-900)] sm:text-3xl">
+          <h2 className="mt-6 text-xl font-semibold leading-snug text-[color:var(--color-navy-900)] sm:text-2xl">
             좋은 기업을 발굴하고
             <br />
             기업의 성장과 함께합니다.
