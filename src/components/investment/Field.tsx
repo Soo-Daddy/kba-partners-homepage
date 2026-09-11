@@ -19,19 +19,19 @@ export default function Field() {
 
         <div className="mt-16 grid gap-px overflow-hidden rounded-sm bg-[color:var(--color-hairline)] sm:grid-cols-2 lg:grid-cols-3">
           {investmentFields.map((field, i) => (
-            <div key={field.en} className="flex min-h-[360px] flex-col bg-white">
-              <div className="relative h-40 w-full overflow-hidden">
+            <div key={field.en} className="group flex min-h-[360px] flex-col bg-white">
+              <div className="relative h-56 w-full overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={IMAGES[i]}
                   alt=""
-                  className="h-full w-full object-cover grayscale"
+                  className="h-full w-full scale-100 object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                 />
                 <div
                   className="absolute inset-0"
                   style={{
                     background:
-                      "linear-gradient(180deg, rgba(10,19,48,0.15) 0%, rgba(10,19,48,0.55) 100%)",
+                      "linear-gradient(180deg, rgba(10,19,48,0.05) 0%, rgba(10,19,48,0.35) 100%)",
                   }}
                 />
               </div>
