@@ -1,10 +1,10 @@
 const STRIP_IMAGES = [
-  "/field/semiconductor.jpg",
-  "/field/ai.jpg",
-  "/field/robotics.jpg",
-  "/field/aerospace.jpg",
-  "/field/bio.jpg",
-  "/field/advtech.jpg",
+  "/strategy/meeting1.jpg",
+  "/strategy/trading.jpg",
+  "/strategy/skyline1.jpg",
+  "/strategy/handshake3.jpg",
+  "/strategy/chart3.jpg",
+  "/strategy/office1.jpg",
 ];
 
 export default function Strategy() {
