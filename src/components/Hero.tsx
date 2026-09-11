@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section
@@ -63,24 +65,24 @@ export default function Hero() {
         </p>
 
         <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4">
-          <a
-            href="#about"
+          <Link
+            href="/about"
             className="group inline-flex items-center gap-2 text-xs font-medium tracking-[0.14em] text-white"
           >
             ABOUT KBA
             <span className="transition-transform group-hover:translate-x-1">
               →
             </span>
-          </a>
-          <a
-            href="#investment"
+          </Link>
+          <Link
+            href="/investment"
             className="group inline-flex items-center gap-2 text-xs font-medium tracking-[0.14em] text-white/60 hover:text-white"
           >
             OUR INVESTMENT
             <span className="transition-transform group-hover:translate-x-1">
               →
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

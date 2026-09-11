@@ -1,24 +1,30 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
-  { href: "#about", label: "ABOUT" },
-  { href: "#investment", label: "INVESTMENT" },
-  { href: "#portfolio", label: "PORTFOLIO" },
-  { href: "#contact", label: "CONTACT" },
+  { href: "/about", label: "ABOUT" },
+  { href: "/investment", label: "INVESTMENT" },
+  { href: "/portfolio", label: "PORTFOLIO" },
+  { href: "/contact", label: "CONTACT" },
 ];
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [scrolledState, setScrolledState] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const scrolled = isHome ? scrolledState : true;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    if (!isHome) return;
+    const onScroll = () => setScrolledState(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [isHome]);
 
   return (
     <header
@@ -29,7 +35,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
-        <a href="#top" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-2.5">
           {scrolled ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src="/kba-logo.jpg" alt="KBA Partners" className="h-8 w-auto" />
@@ -42,11 +48,11 @@ export default function Header() {
               </span>
             </>
           )}
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-11 md:flex">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className={`text-xs font-medium tracking-[0.12em] transition-colors ${
@@ -56,7 +62,7 @@ export default function Header() {
               }`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -80,14 +86,14 @@ export default function Header() {
         <div className="border-t border-[color:var(--color-hairline)] bg-white px-6 py-5 md:hidden">
           <nav className="flex flex-col gap-5">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
                 className="text-xs font-medium tracking-[0.12em] text-[color:var(--color-gray-600)]"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

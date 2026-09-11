@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const NAV_ITEMS = [
-  { href: "#about", label: "ABOUT" },
-  { href: "#investment", label: "INVESTMENT" },
-  { href: "#portfolio", label: "PORTFOLIO" },
-  { href: "#contact", label: "CONTACT" },
+  { href: "/about", label: "ABOUT" },
+  { href: "/investment", label: "INVESTMENT" },
+  { href: "/portfolio", label: "PORTFOLIO" },
+  { href: "/contact", label: "CONTACT" },
 ];
 
 export default function Footer() {
@@ -12,23 +14,23 @@ export default function Footer() {
     <footer className="bg-[color:var(--color-navy-950)] py-16 text-white/50">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-start justify-between gap-10">
-          <div className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo-mark.svg" alt="" className="h-5 w-auto" />
             <span className="text-sm font-semibold tracking-[0.08em] text-white">
               KBA PARTNERS
             </span>
-          </div>
+          </Link>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-2">
             {NAV_ITEMS.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="text-xs font-medium tracking-[0.1em] text-white/50 hover:text-white"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
