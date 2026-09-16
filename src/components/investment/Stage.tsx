@@ -5,7 +5,7 @@ export default function Stage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-28">
       <div className="grid gap-20 lg:grid-cols-[0.7fr_1.3fr]">
-        <div>
+        <div className="text-center">
           <p className="text-xs font-medium tracking-[0.28em] text-[color:var(--color-gray-400)]">
             INVESTMENT STAGE
           </p>
