@@ -16,6 +16,7 @@ export default function Header() {
   const isHome = pathname === "/";
   const [scrolledState, setScrolledState] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [lastPathname, setLastPathname] = useState(pathname);
   const scrolled = isHome ? scrolledState : true;
 
   useEffect(() => {
@@ -25,6 +26,11 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
+
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname);
+    if (menuOpen) setMenuOpen(false);
+  }
 
   return (
     <header
@@ -55,10 +61,15 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
               className={`text-xs font-medium tracking-[0.12em] transition-colors ${
-                scrolled
-                  ? "text-[color:var(--color-gray-600)] hover:text-[color:var(--color-navy-900)]"
-                  : "text-white/75 hover:text-white"
+                pathname === item.href
+                  ? scrolled
+                    ? "text-[color:var(--color-navy-900)]"
+                    : "text-white"
+                  : scrolled
+                    ? "text-[color:var(--color-gray-600)] hover:text-[color:var(--color-navy-900)]"
+                    : "text-white/75 hover:text-white"
               }`}
             >
               {item.label}
@@ -90,7 +101,12 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-xs font-medium tracking-[0.12em] text-[color:var(--color-gray-600)]"
+                aria-current={pathname === item.href ? "page" : undefined}
+                className={`text-xs font-medium tracking-[0.12em] ${
+                  pathname === item.href
+                    ? "text-[color:var(--color-navy-900)]"
+                    : "text-[color:var(--color-gray-600)]"
+                }`}
               >
                 {item.label}
               </Link>

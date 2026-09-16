@@ -1,3 +1,5 @@
+import ContactForm from "@/components/ContactForm";
+
 const INFO = [
   { label: "Address", value: "서울 송파구 송파대로167 테라타워B 703호" },
   { label: "CEO", value: "이규석" },
@@ -38,6 +40,8 @@ export default function Contact() {
             </div>
           ))}
         </div>
+
+        <ContactForm />
       </div>
     </section>
   );
