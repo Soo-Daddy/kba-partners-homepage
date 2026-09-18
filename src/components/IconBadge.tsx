@@ -1,4 +1,4 @@
-type Kind = "partnership" | "stairs";
+type Kind = "partnership" | "stairs" | "shield";
 
 const PATHS: Record<Kind, React.ReactNode> = {
   partnership: (
@@ -28,6 +28,25 @@ const PATHS: Record<Kind, React.ReactNode> = {
       <rect x="60" y="38" width="16" height="42" fill="white" />
       <path d="M76 38 L82 32" stroke="white" strokeWidth="3" strokeLinecap="round" />
       <path d="M76 26 H82 V32" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </>
+  ),
+  shield: (
+    <>
+      <path
+        d="M54 26 L77 35 V52 C77 66 67 75 54 81 C41 75 31 66 31 52 V35 Z"
+        fill="none"
+        stroke="white"
+        strokeWidth="3"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M44 54 L51 61 L65 46"
+        fill="none"
+        stroke="white"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </>
   ),
 };
