@@ -3,12 +3,20 @@ import IconBadge from "@/components/IconBadge";
 const AFFILIATION = [
   { label: "소속", value: "인카금융서비스" },
   { label: "본부명", value: "케이비에이본부" },
+  { label: "본점", value: "문정 본점" },
 ];
 
 const OFFICES = [
   { name: "가산 영업소" },
   { name: "부천 영업소" },
   { name: "강동 영업소", status: "오픈 예정" },
+];
+
+const HISTORY = [
+  { year: "2019", desc: "KBA파트너스 설립" },
+  { year: "2024", desc: "인카금융서비스 합류, 케이비에이본부 문정 본점 설립" },
+  { year: "2025.12", desc: "부천 영업소 오픈" },
+  { year: "2026.10", desc: "강동 영업소 오픈 예정" },
 ];
 
 export default function Insurance() {
@@ -32,7 +40,7 @@ export default function Insurance() {
         </div>
 
         <div>
-          <div className="grid gap-8 sm:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-3">
             {AFFILIATION.map((item) => (
               <div key={item.label}>
                 <p className="text-xs font-medium tracking-wide text-[color:var(--color-gray-400)]">
@@ -67,6 +75,27 @@ export default function Insurance() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-24 border-t border-[color:var(--color-hairline)] pt-16">
+        <p className="text-xs font-semibold tracking-[0.2em] text-[color:var(--color-navy-900)]">
+          연혁
+        </p>
+        <div className="mt-8 divide-y divide-[color:var(--color-hairline)]">
+          {HISTORY.map((item) => (
+            <div
+              key={item.year}
+              className="grid gap-2 py-6 sm:grid-cols-[140px_1fr] sm:gap-8"
+            >
+              <p className="text-sm font-semibold tracking-[0.04em] text-[color:var(--color-navy-900)]">
+                {item.year}
+              </p>
+              <p className="text-sm leading-relaxed text-[color:var(--color-gray-600)]">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
