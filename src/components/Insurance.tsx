@@ -3,20 +3,19 @@ import IconBadge from "@/components/IconBadge";
 const AFFILIATION = [
   { label: "소속", value: "인카금융서비스" },
   { label: "본부명", value: "케이비에이본부" },
-  { label: "본점", value: "문정 본점" },
 ];
 
 const OFFICES = [
-  { name: "가산 영업소" },
-  { name: "부천 영업소" },
-  { name: "강동 영업소", status: "오픈 예정" },
+  { name: "가산 지사" },
+  { name: "부천 지사" },
+  { name: "구리 지사", status: "오픈 예정" },
 ];
 
 const HISTORY = [
   { year: "2019", desc: "KBA파트너스 설립" },
   { year: "2024", desc: "인카금융서비스 합류, 케이비에이본부 문정 본점 설립" },
-  { year: "2025.12", desc: "부천 영업소 오픈" },
-  { year: "2026.10", desc: "강동 영업소 오픈 예정" },
+  { year: "2025.12", desc: "부천 지사 오픈" },
+  { year: "2026.10", desc: "구리 지사 오픈 예정" },
 ];
 
 export default function Insurance() {
@@ -40,7 +39,7 @@ export default function Insurance() {
         </div>
 
         <div>
-          <div className="grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2">
             {AFFILIATION.map((item) => (
               <div key={item.label}>
                 <p className="text-xs font-medium tracking-wide text-[color:var(--color-gray-400)]">
@@ -55,7 +54,7 @@ export default function Insurance() {
 
           <div className="mt-12 border-t border-[color:var(--color-hairline)] pt-8">
             <p className="text-xs font-semibold tracking-[0.2em] text-[color:var(--color-navy-900)]">
-              영업소 현황
+              지사 현황
             </p>
             <div className="mt-6 divide-y divide-[color:var(--color-hairline)]">
               {OFFICES.map((office) => (
