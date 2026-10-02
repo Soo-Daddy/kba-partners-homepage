@@ -41,17 +41,17 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
+      <div className="mx-auto flex h-[92px] max-w-6xl items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-3">
           {scrolled ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/kba-logo.jpg" alt="KBA Partners" className="h-11 w-auto" />
+            <img src="/kba-logo-crop.png" alt="KBA Partners" className="h-14 w-auto" />
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src="/kba-logo-dark.png"
+              src="/kba-logo-dark-crop.png"
               alt="KBA Partners"
-              className="h-10 w-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]"
+              className="h-14 w-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]"
             />
           )}
         </Link>

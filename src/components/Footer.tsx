@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-start justify-between gap-10">
           <Link href="/" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/kba-logo-dark.png" alt="KBA Partners" className="h-9 w-auto" />
+            <img src="/kba-logo-dark-crop.png" alt="KBA Partners" className="h-12 w-auto" />
           </Link>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-2">
