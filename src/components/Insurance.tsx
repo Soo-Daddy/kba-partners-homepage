@@ -73,8 +73,13 @@ export default function Insurance() {
         </p>
 
         <div className="mt-20 grid gap-20 lg:grid-cols-[0.7fr_1.3fr]">
-          <div className="text-center">
+          <div className="text-center lg:flex lg:flex-col lg:justify-center">
             <IconBadge kind="shield" tone="gold" className="mx-auto h-24 w-24" />
+            <p className="mt-8 text-sm leading-[1.9] text-[color:var(--color-gray-600)]">
+              상품을 먼저 권하지 않습니다.
+              <br />
+              자산과 위험을 먼저 들여다봅니다.
+            </p>
           </div>
 
           <div>
