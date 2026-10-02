@@ -42,15 +42,19 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/" className="flex items-center gap-3">
           {scrolled ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src="/kba-logo.jpg" alt="KBA Partners" className="h-8 w-auto" />
+            <img src="/kba-logo.jpg" alt="KBA Partners" className="h-11 w-auto" />
           ) : (
             <>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-mark.svg" alt="" className="h-5 w-auto" />
-              <span className="text-base font-semibold tracking-[0.08em] text-white">
+              <img
+                src="/logo-mark.svg"
+                alt=""
+                className="h-9 w-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]"
+              />
+              <span className="text-xl font-bold tracking-[0.08em] text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
                 KBA PARTNERS
               </span>
             </>
