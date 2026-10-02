@@ -13,6 +13,7 @@ const OFFICES = [
 
 const HISTORY = [
   { year: "2024", desc: "인카금융서비스 합류, 케이비에이본부 설립" },
+  { year: "2024.12", desc: "가산 지사 오픈" },
   { year: "2025.12", desc: "부천 지사 오픈" },
   { year: "2026.10", desc: "구리 지사 오픈 예정" },
 ];
