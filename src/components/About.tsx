@@ -1,9 +1,39 @@
 import IconBadge from "@/components/IconBadge";
 
+const STRIP_IMAGES = [
+  "/about/skyline.jpg",
+  "/about/silhouette1.jpg",
+  "/about/handshake.jpg",
+  "/about/lobby.jpg",
+  "/about/silhouette2.jpg",
+  "/about/growth.jpg",
+];
+
 export default function About() {
   return (
-    <section id="about" className="section-offset mx-auto max-w-6xl px-6 py-28">
-      <div className="grid gap-20 lg:grid-cols-[0.7fr_1.3fr]">
+    <section id="about" className="section-offset py-28">
+      <div className="overflow-hidden">
+        <div className="flex justify-center gap-4 px-6">
+          {STRIP_IMAGES.map((src) => (
+            <div
+              key={src}
+              className="relative h-40 w-56 shrink-0 overflow-hidden rounded-2xl sm:h-52 sm:w-72"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={src} alt="" className="h-full w-full object-cover" />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(10,19,48,0.05) 0%, rgba(10,19,48,0.35) 100%)",
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto mt-20 max-w-6xl px-6 grid gap-20 lg:grid-cols-[0.7fr_1.3fr]">
         <div className="text-center">
           <p className="text-xs font-medium tracking-[0.28em] text-[color:var(--color-gray-400)]">
             ABOUT US
@@ -38,7 +68,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-24 grid gap-20 border-t border-[color:var(--color-hairline)] pt-24 lg:grid-cols-[0.7fr_1.3fr]">
+      <div className="mx-auto mt-24 max-w-6xl grid gap-20 border-t border-[color:var(--color-hairline)] px-6 pt-24 lg:grid-cols-[0.7fr_1.3fr]">
         <div className="text-center">
           <p className="text-xs font-medium tracking-[0.28em] text-[color:var(--color-gray-400)]">
             OUR PHILOSOPHY
