@@ -15,12 +15,9 @@ export default function Footer() {
     <footer className="bg-[color:var(--color-navy-950)] py-16 text-white/50">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-wrap items-start justify-between gap-10">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo-mark.svg" alt="" className="h-7 w-auto" />
-            <span className="text-lg font-bold tracking-[0.08em] text-white">
-              KBA PARTNERS
-            </span>
+            <img src="/kba-logo-dark.png" alt="KBA Partners" className="h-9 w-auto" />
           </Link>
 
           <nav className="flex flex-wrap gap-x-8 gap-y-2">

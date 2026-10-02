@@ -47,17 +47,12 @@ export default function Header() {
             // eslint-disable-next-line @next/next/no-img-element
             <img src="/kba-logo.jpg" alt="KBA Partners" className="h-11 w-auto" />
           ) : (
-            <>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logo-mark.svg"
-                alt=""
-                className="h-9 w-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]"
-              />
-              <span className="text-xl font-bold tracking-[0.08em] text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]">
-                KBA PARTNERS
-              </span>
-            </>
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src="/kba-logo-dark.png"
+              alt="KBA Partners"
+              className="h-10 w-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]"
+            />
           )}
         </Link>
 
