@@ -51,7 +51,7 @@ export default function Header() {
             <img
               src="/kba-logo-dark-crop.png"
               alt="KBA Partners"
-              className="h-14 w-auto drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]"
+              className="h-14 w-auto"
             />
           )}
         </Link>
