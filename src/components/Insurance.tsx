@@ -17,14 +17,14 @@ const AFFILIATION = [
 const OFFICES = [
   { name: "가산 지사" },
   { name: "부천 지사" },
-  { name: "구리 지사", status: "오픈 예정" },
+  { name: "구리 지사" },
 ];
 
 const HISTORY = [
   { year: "2024", desc: "인카금융서비스 합류, 케이비에이본부 설립" },
   { year: "2024.12", desc: "가산 지사 오픈" },
   { year: "2025.12", desc: "부천 지사 오픈" },
-  { year: "2026.10", desc: "구리 지사 오픈 예정" },
+  { year: "2026.10", desc: "구리 지사 오픈" },
 ];
 
 export default function Insurance() {
@@ -129,11 +129,6 @@ export default function Insurance() {
                     <p className="text-sm font-medium text-[color:var(--color-navy-900)]">
                       {office.name}
                     </p>
-                    {office.status && (
-                      <span className="text-xs font-medium tracking-wide text-[color:var(--color-gold-500)]">
-                        {office.status}
-                      </span>
-                    )}
                   </div>
                 ))}
               </div>
