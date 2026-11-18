@@ -15,7 +15,7 @@ const AFFILIATION = [
 ];
 
 const OFFICES = [
-  { name: "가산 지사" },
+  { name: "삼성동 본부" },
   { name: "부천 지사" },
   { name: "구리 지사" },
 ];
