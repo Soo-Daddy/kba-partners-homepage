@@ -25,6 +25,7 @@ const HISTORY = [
   { year: "2024.12", desc: "가산 지사 오픈" },
   { year: "2025.12", desc: "부천 지사 오픈" },
   { year: "2026.10", desc: "구리 지사 오픈" },
+  { year: "2026.11", desc: "케이비에이본부 삼성동 이전" },
 ];
 
 export default function Insurance() {
