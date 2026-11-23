@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 
 const INFO = [
-  { label: "Address", value: "서울 송파구 송파대로167 테라타워B 703호" },
+  { label: "Address", value: "서울특별시 강남구 테헤란로86길 14 윤천빌딩 6층" },
   { label: "CEO", value: "이규석" },
 ];
 

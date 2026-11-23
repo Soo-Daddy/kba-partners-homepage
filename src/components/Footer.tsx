@@ -39,7 +39,7 @@ export default function Footer() {
             497-88-01157
           </p>
           <p className="mt-1">
-            주소 서울 송파구 송파대로167 테라타워B 703호
+            주소 서울특별시 강남구 테헤란로86길 14 윤천빌딩 6층
           </p>
           <p className="mt-6 text-white/35">
             본 웹사이트에 게시된 정보는 KBA파트너스의 사업 소개를 위한
